@@ -1,0 +1,36 @@
+.page-header__download-link {
+	color: #fff;
+	border-radius: 35px;
+	display: inline-block;
+	width: 90%;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 18px 0;
+	text-align: center;
+	border: 3px solid white;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+	position: relative;
+	z-index: 1;
+	&:hover {
+		background-color: #fff;
+		color: #d63163;
+	}
+}
+
+@media @tablet-width {
+
+	.page-header__download-link {
+	width: 85%;
+}
+}
+
+@media @desktop-width {
+	.page-header__download-link {
+	width: 50%;
+	font-size: 21px;
+	line-height: 18px;
+}
+}

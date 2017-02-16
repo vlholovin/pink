@@ -1,0 +1,174 @@
+.features {
+  margin-top: 270px;
+  
+	
+  &__wrapper {
+  	.container-fluid();
+  }
+&__intro {
+	text-align: center;
+	margin-bottom: 30px;
+	&-text {
+		font-size: 24px;
+		line-height: @lh-auto;
+		margin: 0 auto;
+		width: 75%;
+		padding-top: 40px;
+		
+	}
+}
+&__list {
+	position: relative;
+	background-color: #ececec;
+	.road();
+	padding-top: 100px;
+	padding-bottom: 250px;
+
+	&:before {
+		background: url("../img/iphone-screen-2-3@2x.png")no-repeat;
+		background-size: 150px auto;
+		position: absolute;
+		content: "";
+		height: 300px;
+		width: 150px;
+		bottom: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+&__item {
+	width: 70%;
+	margin: 0 auto;
+
+	&-title {
+		color: #000;
+	}
+	&-text {
+		margin-top: 30px;
+		margin-bottom: 45px;
+	}
+}
+}
+
+@media @tablet-width {
+	.features {
+	margin: 0;
+	margin-top: 40px;
+
+	&__intro {
+
+	&-text {
+	padding: 0;
+	margin-bottom: 15px;
+
+	&:last-child {
+		width: 40%;
+	}
+	}
+	}
+	&__list {
+		text-align: left;
+		padding-bottom: 10px;
+	&:before {
+		background: url("../img/iphone-screen-2-3@2x.png")no-repeat;
+		background-size: 250px auto;
+		position: absolute;
+		content: "";
+		height: 450px;
+		width: 300px;
+		bottom: 0%;
+		left: 30%;
+		z-index: 2;
+	}
+	}
+	&__item {
+		padding-left: 50%;
+		width: 50%;
+	}
+	&__wrapper {
+		.container();
+
+	}
+	}
+}
+
+@media @desktop-width {
+	.features {
+	
+	&__wrapper {
+		.container();
+	}
+	&__intro {
+	padding-top: 30px;
+
+	&-text {
+		font-size: 40px;
+		line-height: @lh-auto;
+		padding-bottom: 20px;
+	}
+	}
+	&__list {
+
+		&:before {
+			display: none;
+		}
+	}
+	&__item {
+		padding: 0;
+		display: inline-block;
+		width: 33%;
+		padding-top: 250px;
+		padding-bottom: 70px;
+		text-align: center;
+		position: relative;
+		
+
+	&-text {
+		font-size: 18px;
+		line-height: 1.3;
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	&-title {
+		font-size: 21px;
+		line-height: 1.3;
+		width: 50%;
+		display: inline-block;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 200px;
+		height: 300px;
+		background-color: #000;
+		bottom: 60%;
+		z-index: 7;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	&--world {
+
+	&:after {
+		background: url(../img/iphone-screen-3-2@2x.png)no-repeat 50% 50%;
+		background-size: 270px auto;
+	}
+	}
+	&--lucky {
+
+	&:after {
+		background: url(../img/iphone-screen-3-1@2x.png)no-repeat 50% 50%;
+		background-size: 270px auto;
+	}
+	}
+	&--friends {
+
+	&:after {
+		background: url(../img/iphone-screen-3-3@2x.png)no-repeat 50% 50%;
+		background-size: 270px auto;
+	}
+	}
+	}
+}
+}
