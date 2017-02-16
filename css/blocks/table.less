@@ -117,6 +117,26 @@
 				background-color: transparent;
 				border: none;
 			}
+
+			&--top {
+				position: relative;
+
+				&:before {
+		content: "хит";
+        display: block;
+        position: absolute;
+        width: 20%;
+        right: auto;
+        left: 50%;
+        top: -28%;
+        padding: 5px;
+        text-align: center;
+        background: #e36889;
+        box-shadow: 0 2px 5px 1px black;
+        color: #fff;
+        transform: translateX(-50%);
+		}
+			}
 		}
 		&__cell {
 			width: 20%;
@@ -139,5 +159,18 @@
 			font-size: 18px;
 			line-height: 30px;
 		}
+	}
+}
+
+@media @desktop-width {
+	.price {
+		padding-bottom: 70px;
+	&__cell {
+		font-size: 19px;
+		text-transform: none;
+	}
+	&__tarrif {
+		font-size: 22px;
+	}
 	}
 }
