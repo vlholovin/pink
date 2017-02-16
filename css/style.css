@@ -606,3 +606,133 @@ picture img {
     line-height: 1.3;
   }
 }
+.feedback {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.feedback__wrapper {
+  width: auto;
+}
+@media (max-width: 699px) {
+  .feedback__wrapper {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 90%;
+  }
+}
+.feedback__item {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  display: none;
+  min-height: 240px;
+}
+.feedback__item:nth-of-type(n+2) {
+  display: none;
+}
+.feedback__item-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+}
+.feedback__item-text {
+  font-size: 14px;
+  line-height: 30px;
+  padding-top: 30px;
+  width: 60%;
+  margin: 0 auto;
+}
+.feedback__toggle {
+  display: none;
+}
+.feedback__hidetext {
+  display: none;
+}
+@media (min-width: 700px) {
+  .feedback__wrapper {
+    margin: 0 auto;
+    width: 280px;
+  }
+  .feedback__item-title {
+    font-size: 21px;
+    line-height: 32px;
+  }
+  .feedback__item-text {
+    font-size: 18px;
+    width: 90%;
+  }
+  .feedback__hidetext {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+@media (min-width: 700px) and (min-width: 700px) {
+  .feedback__wrapper {
+    width: 660px;
+  }
+}
+@media (min-width: 700px) and (min-width: 1200px) {
+  .feedback__wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+.slider {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.feedback-slider__btn {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 25px 13px 0;
+  border: 2px solid #000;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #e36889;
+}
+.feedback-slider[type="radio"] {
+  display: none;
+}
+#feedback-1:checked ~ .feedback__item--nicolay,
+#feedback-2:checked ~ .feedback__item--philip,
+#feedback-3:checked ~ .feedback__item--yaroslav {
+  display: block;
+}
+#feedback-1:checked ~ .slider label[for="feedback-1"],
+#feedback-2:checked ~ .slider label[for="feedback-2"],
+#feedback-3:checked ~ .slider label[for="feedback-3"] {
+  position: relative;
+}
+#feedback-1:checked ~ .slider label[for="feedback-1"]:after,
+#feedback-2:checked ~ .slider label[for="feedback-2"]:after,
+#feedback-3:checked ~ .slider label[for="feedback-3"]:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  top: 21%;
+  right: 25%;
+  border-radius: 50%;
+}
+@media (min-width: 700px) {
+  #feedback-1:checked ~ .slider label[for="feedback-1"]:after,
+  #feedback-2:checked ~ .slider label[for="feedback-2"]:after,
+  #feedback-3:checked ~ .slider label[for="feedback-3"]:after {
+    top: 21%;
+    right: 22%;
+  }
+}
+@media (min-width: 1200px) {
+  .slider {
+    display: none;
+  }
+}

@@ -1,0 +1,71 @@
+.slider {
+	font-size: 0;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.feedback-slider__btn {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin: 25px 13px 0;
+	border: 2px solid #000;
+	vertical-align: top;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #e36889;
+	}
+
+.feedback-slider[type="radio"] {
+	display: none;
+}
+#feedback-1:checked ~ .feedback__item--nicolay,
+ #feedback-2:checked ~ .feedback__item--philip,
+ #feedback-3:checked ~ .feedback__item--yaroslav {
+      display: block;
+    }
+
+#feedback-1:checked ~ .slider label[for="feedback-1"],
+#feedback-2:checked ~ .slider label[for="feedback-2"],
+#feedback-3:checked ~ .slider label[for="feedback-3"] {
+      position: relative;
+
+	&:after {
+		content: "";
+		width: 5px;
+		height: 5px;
+		background-color: #000;
+		position: absolute;
+		top: 21%;
+		right: 25%;
+		border-radius: 50%;
+	}
+
+    }
+
+
+ @media @tablet-width {
+
+#feedback-1:checked ~ .slider label[for="feedback-1"],
+#feedback-2:checked ~ .slider label[for="feedback-2"],
+#feedback-3:checked ~ .slider label[for="feedback-3"] {
+      
+
+	&:after {
+		
+		top: 21%;
+		right: 22%;
+		
+	}
+
+    }
+
+	
+}
+
+@media @desktop-width {
+	.slider {
+		display: none;
+	}
+}
