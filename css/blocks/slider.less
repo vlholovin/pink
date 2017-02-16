@@ -5,7 +5,8 @@
 	margin: 0 auto;
 }
 
-.feedback-slider__btn {
+.feedback-slider__btn,
+.price-slider__btn {
 	display: inline-block;
 	width: 9px;
 	height: 9px;
@@ -37,8 +38,34 @@
 		height: 5px;
 		background-color: #000;
 		position: absolute;
-		top: 21%;
-		right: 25%;
+		top: 23%;
+		right: 21%;
+		border-radius: 50%;
+	}
+
+    }
+.price-slider[type="radio"] {
+	display: none;
+}
+#price-1:checked ~ .price__slide--slide-1,
+ #price-2:checked ~ .price__slide--slide-2,
+ #price-3:checked ~ .price__slide--slide-3 {
+      display: block;
+    }
+
+#price-1:checked ~ .slider label[for="price-1"],
+#price-2:checked ~ .slider label[for="price-2"],
+#price-3:checked ~ .slider label[for="price-3"] {
+      position: relative;
+
+	&:after {
+		content: "";
+		width: 5px;
+		height: 5px;
+		background-color: #000;
+		position: absolute;
+		top: 23%;
+		right: 21%;
 		border-radius: 50%;
 	}
 

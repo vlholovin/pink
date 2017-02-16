@@ -1,6 +1,6 @@
 .feedback {
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 50px;
 	&__wrapper {
 		.container-fluid();
 	}
@@ -62,5 +62,78 @@
 		font-size: 16px;
 		line-height: 1.3;
 	}
+	}
+}
+
+@media @desktop-width {
+	.feedback {
+		padding-top: 150px;
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			background: url("../img/quote.jpg")no-repeat;
+			width: 110px;
+			height: 110px;
+			top: 10%;
+			right: 50%;
+			transform: translateX(50%);
+		}
+		&__item {
+
+			&-title {
+				font-size: 24px;
+			}
+			&-text {
+				font-size: 21px;
+				width: 80%;
+			}
+		}
+		&__wrapper {
+			position: relative;
+			.container();
+		
+		}
+		&__toggle {
+			display: block;
+			position: absolute;
+			background-color: #fff;
+			width: 50px;
+			height: 50px;
+			font-size: 0;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			bottom: 40%;
+
+			&--prev::after,
+    		&--next::after {
+        content: "";
+        position: absolute;
+        border-bottom: 16px solid transparent;
+        border-top: 16px solid transparent;
+        bottom: 50%;
+        height: 0;
+        right: 50%;
+        transform: translate(50%, 50%);
+        width: 0;
+      }
+     &--next {
+		right: 0;
+
+	 &::after {
+          border-left: 25px solid #5a2c43;
+        }
+     }
+	&--prev {
+		left: 0;
+
+	 &::after {
+          border-right: 25px solid #5a2c43;
+        }
+     }
+     }
+		}
 	}
 }
